@@ -3,6 +3,17 @@ def load_dictionary(file_path):
         return [line.strip() for line in file]
 
 def wagner_fischer(s1, s2):
+
+    """
+    Calculates the minimum edit distance between two strings using the Wagner-Fischer algorithm.
+
+    Args:
+        s1 (str): The first string.
+        s2 (str): The second string.
+
+    Returns:
+        int: The minimum edit distance between the two strings.
+    """
     len_s1, len_s2 = len(s1), len(s2)
     if len_s1 > len_s2:
         s1, s2 = s2, s1
